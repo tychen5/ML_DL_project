@@ -8,6 +8,6 @@ pickle needed
 
 needed files are in models dir
 
-discuss with pre-ml classmate
+collaborator: discuss with pre-ml classmate
 
-modify sample code
+some code modified from sample code
