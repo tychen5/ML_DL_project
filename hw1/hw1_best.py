@@ -15,7 +15,9 @@ try:
     import sys
     import numpy as np
     import pandas as pd
+    import pickle
     import sklearn
+    from math import sqrt
     from sklearn.svm import SVR
     from sklearn.metrics import make_scorer
     from sklearn.metrics import mean_squared_error
@@ -24,8 +26,6 @@ try:
     from sklearn.model_selection import GridSearchCV   ##Grid Search CV(model,parameter_dict) ; 
     import xgboost as xgb
     from sklearn.preprocessing import MinMaxScaler
-    import pickle
-    from math import sqrt
     from keras import backend as K
     from keras.models import *
     from keras.layers import *
