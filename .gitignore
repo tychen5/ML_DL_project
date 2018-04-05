@@ -5,7 +5,8 @@ __pycache__/
 
 # file not needed
 **/data/*
-**/model/*
+hw1/model/*
+hw2/models/*
 **/.ipynb_checkpoints/*
 **/*.ipynb
 
