@@ -6,10 +6,15 @@ __pycache__/
 # file not needed
 **/data/*
 hw1/model/*
+hw2/model/*
 hw2/models/*
 **/.ipynb_checkpoints/*
 **/*.ipynb
-
+**/logs/*
+**/result/*
+hw3/model/*
+hw3/models/*.h5
+hw3/models/norm
 
 # C extensions
 *.so
