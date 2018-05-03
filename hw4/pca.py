@@ -97,4 +97,4 @@ rec_face.resize(600,600,3) #inplace=True
 # In[107]:
 
 
-imsave('reconstruction.jpg',rec_face) #change
+imsave('reconstruction.png',rec_face) #change

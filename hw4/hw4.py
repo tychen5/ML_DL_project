@@ -41,22 +41,25 @@ test_X = pd.read_csv(test_path)
 
 
 
-#pca = PCA(n_components=415,iterated_power='auto', whiten=True,svd_solver="full",random_state=725035) #n_components='mle',395
-#train_X_PCA = pca.fit_transform(train_X)
+pca = PCA(n_components=415,iterated_power='auto', whiten=True,svd_solver="full",random_state=725035) #n_components='mle',395
+train_X_PCA = pca.fit_transform(train_X)
 
 print("======PCA DONE========")
-#cluster = KMeans(init='k-means++',n_init=10,max_iter=350,precompute_distances='auto',algorithm='auto',random_state=725035,n_clusters=2,n_jobs=-1,verbose=0) #11,305
-#cluster.fit(train_X_PCA)
+cluster = KMeans(init='k-means++',n_init=10,max_iter=350,precompute_distances='auto',algorithm='auto',random_state=725035,n_clusters=2,n_jobs=-1,verbose=0) #11,305
+cluster.fit(train_X_PCA)
 
-#pickle.dump(pca,open('models/method2_pca.pkl','wb'))
-#pickle.dump(cluster, open('models/method2_mle2.pkl','wb'))
+try:
+    pickle.dump(pca,open('models/method2_pca.pkl','wb'))
+    pickle.dump(cluster, open('models/method_mle2.pkl','wb'))
 
 
 # In[32]:
 
 
 #predict
-cluster = pickle.load(open('models/method2_mle2.pkl','rb'))
+    #cluster = pickle.load(open('models/method2_mle2.pkl','rb'))
+except:
+    pass
 
 
 all_ind = test_X['ID']
