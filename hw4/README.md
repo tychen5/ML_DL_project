@@ -4,4 +4,4 @@
 
 collaborator: discuss with pre-ml classmate R06725048, not sure if his code is uploaded to github or did he refrence other classmates' code for teaching me.
 
-models/ file needed
+models/ file needed to save intermediate files
