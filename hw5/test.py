@@ -55,7 +55,6 @@ def get_Test(path,size,type_):
 
 
 def Testing_Preprocessing(path,type_):
-    print('  Loading', path + '...')
     _lines = []
     if type_ == 'reg':
         stemmer = gensim.parsing.porter.PorterStemmer()
@@ -73,7 +72,6 @@ def Testing_Preprocessing(path,type_):
 
 
 def read_dicts(path):
-    print('  Loading', path + '...')
     with open(path, 'rb') as f:
         dicts = pickle.load(f)
     return dicts
