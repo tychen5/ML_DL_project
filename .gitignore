@@ -11,11 +11,14 @@ hw2/models/*
 **/.ipynb_checkpoints/*
 **/*.ipynb
 **/logs/*
+**/log/*
 **/result/*
 hw3/model/*
 hw3/models/*.h5
 hw3/models/norm
-
+hw4/model/*
+hw5/model/*
+hw6/model/*
 # C extensions
 *.so
 
