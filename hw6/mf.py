@@ -88,22 +88,22 @@ print(test_user.shape , test_movie.shape)
 
 
 def get_model(n_users, n_items, bias=True,latent_dim=256):
-    get_custom_objects().update({"rmse": rmse})
     user_input = Input(shape=[1])
     item_input = Input(shape=[1])
     user_vec = Embedding(n_users, latent_dim , embeddings_initializer='random_normal')(user_input)
     user_vec = Flatten()(user_vec)
     item_vec = Embedding(n_items, latent_dim, embeddings_initializer='random_normal')(item_input)
     item_vec = Flatten()(item_vec)
-    r_hat = dot([user_vec,item_vec],axes=1)
+    r_hat = Dot(axes=1)([user_vec,item_vec])
     if bias:
         user_bias = Embedding(n_users,1, embeddings_initializer="zeros")(user_input)
         user_bias = Flatten()(user_bias)
         item_bias = Embedding(n_items, 1, embeddings_initializer="zeros")(item_input)
         item_bias = Flatten()(item_bias)
-        r_hat = add([r_hat, user_bias, item_bias])
+        r_hat = Add()([r_hat, user_bias, item_bias])
         print('=using bias=')
     model = Model([user_input,item_input],r_hat)
+    model.summary()
     return model
 
 

@@ -103,7 +103,6 @@ def _shuffle(X, X2 ,Y):
 # In[95]:
 
 
-# pair = pd.concat([train,test])[["UserID","MovieID"]] #(uid,mid) pair
 
 # 重新編號
 uid_encode = {}
@@ -120,8 +119,8 @@ print('uid#',uid_num,'mid#',mid_num)
 # In[96]:
 
 
-# pickle.dump(uid_encode,open('model/uid_encode.pkl','wb'))
-# pickle.dump(mid_encode,open('model/mid_encode.pkl','wb'))
+pickle.dump(uid_encode,open('model/uid_encode.pkl','wb'))
+pickle.dump(mid_encode,open('model/mid_encode.pkl','wb'))
 
 
 # In[97]:
@@ -193,22 +192,20 @@ print(train_user.shape , train_movie.shape , train_rating.shape)
 
 
 def get_model(n_users, n_items, bias=True,latent_dim=256):
-    get_custom_objects().update({"rmse": rmse})
     user_input = Input(shape=[1])
     item_input = Input(shape=[1])
     user_vec = Embedding(n_users, latent_dim , embeddings_initializer='random_normal')(user_input)
     user_vec = Flatten()(user_vec)
     item_vec = Embedding(n_items, latent_dim, embeddings_initializer='random_normal')(item_input)
     item_vec = Flatten()(item_vec)
-    r_hat = dot([user_vec,item_vec],axes=1)
-    if bias:
-        user_bias = Embedding(n_users,1, embeddings_initializer="zeros")(user_input)
-        user_bias = Flatten()(user_bias)
-        item_bias = Embedding(n_items, 1, embeddings_initializer="zeros")(item_input)
-        item_bias = Flatten()(item_bias)
-        r_hat = add([r_hat, user_bias, item_bias])
-        print('=using bias=')
+    r_hat = Dot(axes=1)([user_vec,item_vec])
+    user_bias = Embedding(n_users,1, embeddings_initializer="zeros")(user_input)
+    user_bias = Flatten()(user_bias)
+    item_bias = Embedding(n_items, 1, embeddings_initializer="zeros")(item_input)
+    item_bias = Flatten()(item_bias)
+    r_hat = Add()([r_hat, user_bias, item_bias])
     model = Model([user_input,item_input],r_hat)
+    model.summary()
     return model
 
 
