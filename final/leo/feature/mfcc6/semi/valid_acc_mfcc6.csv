@@ -1,0 +1,11 @@
+unverified_csv,test_csv,each-fold_acc
+leo_resnet_mfcc6_unverified_1.csv,leo_resnet_mfcc6_test_1.csv,0.81941
+leo_resnet_mfcc6_unverified_2.csv,leo_resnet_mfcc6_test_2.csv,0.83019
+leo_resnet_mfcc6_unverified_3.csv,leo_resnet_mfcc6_test_3.csv,0.81941
+leo_resnet_mfcc6_unverified_4.csv,leo_resnet_mfcc6_test_4.csv,0.85984
+leo_resnet_mfcc6_unverified_5.csv,leo_resnet_mfcc6_test_5.csv,0.84367
+leo_resnet_mfcc6_unverified_6.csv,leo_resnet_mfcc6_test_6.csv,0.85175
+leo_resnet_mfcc6_unverified_7.csv,leo_resnet_mfcc6_test_7.csv,0.85904
+leo_resnet_mfcc6_unverified_8.csv,leo_resnet_mfcc6_test_8.csv,0.88949
+leo_resnet_mfcc6_unverified_9.csv,leo_resnet_mfcc6_test_9.csv,0.83558
+leo_resnet_mfcc6_unverified_10.csv,leo_resnet_mfcc6_test_10.csv,0.86792
