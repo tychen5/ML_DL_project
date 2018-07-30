@@ -15,6 +15,5 @@ please use python 3.5 for testing
 * tensorflow 1.8.0 
 * keras 2.1.6 
 
-**Files Needed**
-
-models/ file needed to save intermediate files
+**Files Needed:**
+- models/ dir need to save intermediate files
