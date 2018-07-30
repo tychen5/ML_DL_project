@@ -5,4 +5,4 @@
 * tensorflow-1.6.0
 * keras-2.1.4
 
-- need files in model and model_old
+- other needed files are in model and model_old
