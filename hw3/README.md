@@ -5,7 +5,7 @@
 * private model
 * public model
 
-*aroung 1GB*
+*(around 1GB)*
 
 - models/ file needed
 
