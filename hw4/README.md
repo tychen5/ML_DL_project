@@ -1,7 +1,12 @@
-# HW4
-* 硬體規格: GTX-1080TI + I7-8700 + 128GB RAM
-* 訓練環境: Ubuntu16.04.4 Server + anaconda3 + python 3.6.4 
+# HW4-PCA & Image Classification
 
-collaborator: discuss with pre-ml classmate R06725048, not sure if his code is uploaded to github or did he refrence other classmates' code for teaching me.
+**Training Hardware**
 
-models/ file needed to save intermediate files
+* GTX-1080TI + I7-8700 + 128GB RAM
+
+**Training Environment**
+
+* Ubuntu16.04.4 Server + anaconda3 + python 3.6.4 
+
+**Needed files**
+- models/ dir to save intermediate files
