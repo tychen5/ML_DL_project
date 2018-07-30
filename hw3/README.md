@@ -1,6 +1,6 @@
 # Image Sentiment Classification
 
-**files need to download:**
+**Files needed to download**
 * normalization file
 * private model
 * public model
