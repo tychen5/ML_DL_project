@@ -4,7 +4,9 @@
 * normalization file
 * private model
 * public model
+
 *aroung 1GB*
+
 - models/ file needed
 
 **Training Hardware**
