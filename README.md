@@ -1,5 +1,4 @@
 # Machine Learning Project Implementation
-*REF: Machine Learning (2018, Spring)-NTU*
 
 1. PM2.5 Prediction : https://ntumlta2018.github.io/ml-web-hw1/
     * linear regression
