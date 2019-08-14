@@ -1,4 +1,4 @@
-# HW4-PCA & Image Clustering
+# PCA & Image Clustering
 
 * Eigenfaces, Eigenvalues reconstruction
 * Implement detail please see report.pdf
